@@ -1,0 +1,61 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile data stored in Firestore",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoUrl": { "type": "string" },
+        "tier": { "type": "string", "enum": ["Free", "Pro", "Cyberpunk Elite"] },
+        "tokenCount": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "email", "displayName"]
+    },
+    "UserChatMessage": {
+      "title": "UserChatMessage",
+      "description": "Chat message stored for synced conversation history",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "conversationId": { "type": "string" },
+        "sender": { "type": "string", "enum": ["user", "rio"] },
+        "text": { "type": "string" },
+        "isVoice": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "conversationId", "sender", "text"]
+    },
+    "UserGeneration": {
+      "title": "UserGeneration",
+      "description": "Saved AI Image, Video script, or AI Tool generation",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "type": "string", "enum": ["image", "video", "tool"] },
+        "prompt": { "type": "string" },
+        "resultUrl": { "type": "string" },
+        "summary": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "type", "prompt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile document owned by the authenticated user"
+    },
+    "/users/{userId}/messages/{messageId}": {
+      "schema": "UserChatMessage",
+      "description": "Conversation chat messages belonging to the user"
+    },
+    "/users/{userId}/generations/{genId}": {
+      "schema": "UserGeneration",
+      "description": "Generated images, videos, and tool artifacts for the user"
+    }
+  }
+}

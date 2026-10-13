@@ -1,0 +1,6 @@
+{
+  "name": "Rio",
+  "description": "Rio - Sleek voice AI companion with intelligent conversational audio and custom neon dark theme",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
