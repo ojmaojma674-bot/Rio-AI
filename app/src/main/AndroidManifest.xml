@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.rioai.app"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:name="com.rioai.app.RioApplication"
+        android:allowBackup="true"
+        android:label="Rio"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <activity android:name="com.rioai.app.ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- WorkManager initialization via ContentProvider is automatic; no services required here -->
+
+    </application>
+
+</manifest>

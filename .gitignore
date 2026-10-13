@@ -1,0 +1,53 @@
+.gradle
+/local.properties
+/.idea
+/.gradle
+/build/
+*/build/
+**/build/
+/.DS_Store
+/.externalNativeBuild
+/captures/
+output.json
+/*.iml
+.gradle/
+.gradle
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Gradle Wrapper
+gradle/wrapper/gradle-wrapper.jar
+
+# Keystore files
+*.jks
+
+# Native debug
+obj/
+
+# IntelliJ
+*.iml
+.idea/
+
+# APKs and AABs
+*.apk
+*.aab
+
+# Generated files
+/build/
+**/build/
+
+# Crashlytics
+fabric.properties
+
+# Proguard folder
+proguard/
+
+# local env
+.env
+
+# Kotlin/Native
+*.kotlin_module
+
+# macOS
+.DS_Store

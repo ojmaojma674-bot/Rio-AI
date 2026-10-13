@@ -1,11 +1,14 @@
-<div align="center">
+# Rio-AI
+Advance AI Project — Rio assistant (restored skeleton)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+This branch provides a clean Android app skeleton and core AI modules (placeholders) to restore the project and enable further development.
 
-  <h1>Built with AI Studio</h2>
+Key features added:
+- Android app skeleton (app module)
+- Application class with crash handler, logging (Timber), WorkManager initialization
+- AI engine core (intent parsing, memory store)
+- Background worker (WorkManager) example
+- MainActivity UI placeholder
+- Proper .gitignore
 
-  <p>The fastest path from prompt to production with Gemini.</p>
-
-  <a href="https://aistudio.google.com/apps">Start building</a>
-
-</div>
+Build: This skeleton targets Android SDK 33 and uses Android Gradle Plugin 7.4.2 and Kotlin 1.7.20. Adjust versions in root build.gradle if needed.
