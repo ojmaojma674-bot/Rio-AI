@@ -1,0 +1,23 @@
+name: ChatGPT Reviewer
+
+on:
+pull_request:
+types: [opened, synchronize, reopened]
+
+permissions:
+contents: read
+pull-requests: write
+issues: write
+
+jobs:
+review:
+runs-on: ubuntu-latest
+steps:
+- name: Checkout repository
+uses: actions/checkout@v4
+
+  - name: ChatGPT Reviewer
+    uses: feiskyer/ChatGPT-Reviewer@v0.8
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
